@@ -19,7 +19,7 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: my_app_production
+  host: db
   username: root
   password: password
   # 上にすると$bin/rails db:migrateできる

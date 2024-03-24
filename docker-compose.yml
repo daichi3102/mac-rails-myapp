@@ -4,9 +4,12 @@ services:
   db:
     image: postgres:14 # バージョンを15.5にしています
     environment:
-      POSTGRES_DB: app_development_2va3
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: password
+      # POSTGRES_DB: app_development_2va3
+      # POSTGRES_USER: root
+      # POSTGRES_PASSWORD: password
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -21,7 +24,8 @@ services:
       - .:/app
       - bundle_data:/usr/local/bundle:cached
     environment:
-      - RAILS_ENV=development
+      - RAILS_ENV=${RAILS_ENV}
+      # - RAILS_ENV=development
       # - RAILS_ENV=production
       # - RENDER_DB_URL=${RENDER_DB_URL}
     ports:

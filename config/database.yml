@@ -87,7 +87,7 @@ test:
 #
 production:
   <<: *default
-  # url: <%= ENV["RENDER_DB_URL"] %>
+  url: <%= ENV["RENDER_URL"] %>
   # database: my_app_production
   # username: my_app
   # password: <%= ENV["MY_APP_DATABASE_PASSWORD"] %>
@@ -97,5 +97,5 @@ production:
   # password: <%= ENV["POSTGRES_PASSWORD"] %>
   adapter: postgresql
   encoding: unicode
-  database: app_development_2va3
-  username: root
+  # database: app_development_2va3
+  # username: root

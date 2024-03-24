@@ -21,9 +21,9 @@ services:
       - .:/app
       - bundle_data:/usr/local/bundle:cached
     environment:
-      # - RAILS_ENV=development
+      - RAILS_ENV=development
       # - RAILS_ENV=production
-      - RENDER_DB_URL=${RENDER_DB_URL}
+      # - RENDER_DB_URL=${RENDER_DB_URL}
     ports:
       - "3000:3000"
     depends_on:

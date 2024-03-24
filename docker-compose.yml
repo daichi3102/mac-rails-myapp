@@ -2,7 +2,7 @@
 version: '3'
 services:
   db:
-    image: postgres:15.5 # バージョンを15.5にしています
+    image: postgres:15.5 # postgres --versionで確認済み
     environment:
       POSTGRES_DB: app_development
       POSTGRES_USER: root

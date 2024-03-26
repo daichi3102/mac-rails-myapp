@@ -18,9 +18,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: dpg-cnu3nj21hbls73b23la0-a
+  host: <%= ENV["RENDER_DB_HOSTNAME"] %>
   username: root
-  password: LPjlMflHAcsDdZaG8LE1wnNPOGlNpRtp
+  password: <%= ENV["RENDER_DB_PASSWORD"] %>
 
 development:
   <<: *default
@@ -84,4 +84,4 @@ production:
   <<: *default
   database: app_development_2va3
   username: root
-  password: LPjlMflHAcsDdZaG8LE1wnNPOGlNpRtp
+  password: <%= ENV["RENDER_DB_PASSWORD"] %>

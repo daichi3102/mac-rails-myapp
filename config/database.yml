@@ -89,6 +89,6 @@ test:
 #
 production:
   <<: *default
-  database: app_development_1zur
+  database: my_app_production_j678
   username: root
   password: <%= ENV["RENDER_DB_PASSWORD"] %>

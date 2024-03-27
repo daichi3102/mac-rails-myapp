@@ -21,10 +21,13 @@ services:
       - .:/app
       - bundle_data:/usr/local/bundle:cached
     environment:
-      - RAILS_ENV=production
+      - RAILS_ENV=development # database.ymlで定義してる
+      # - RAILS_ENV=<%= ENV["RAILS_ENV"] %>
+      # - RAILS_ENV=${RAILS_ENV}
     ports:
       - "3000:3000"
     depends_on:
       - db
 volumes:
   postgres_data:
+  bundle_data:

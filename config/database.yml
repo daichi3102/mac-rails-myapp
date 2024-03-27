@@ -89,6 +89,6 @@ test:
 #
 production:
   <<: *default
-  database: app_development_2va3
+  database: app_development_1zur
   username: root
   password: <%= ENV["RENDER_DB_PASSWORD"] %>
